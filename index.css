@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+:root {
+    /* ### Primary */
+
+--Soft-red: hsl(7, 99%, 70%);
+--Yellow: hsl(51, 100%, 49%);
+--Dark-desaturated-cyan-graphic-design-text: hsl(167, 40%, 24%);
+--Dark-blue-photography-text: hsl(198, 62%, 26%);
+--Dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+
+/* ### Neutral */
+
+--Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+--Verydark-grayish-blue: hsl(213, 9%, 39%);
+--Dark-grayish-blue: hsl(232, 10%, 55%);
+--Grayish-blue: hsl(210, 4%, 67%);
+--White: hsl(0, 0%, 100%);
+
+
+
+/* ### Body Copy */
+
+--Font-size: 18px;
+
+
+--ff-Barlow: 'Barlow', sans-serif;
+--ff-fraunces: 'Fraunces', serif;
+}
+
+
+ .attribution { font-size: 11px; text-align: center; }
+ .attribution a { color: hsl(228, 45%, 44%); }
+
+
+ *{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+ }
+
+ body {
+    width: 100%;
+    height: fit-content;
+    min-width: fit-content;
+ }
+
+ /* ............
+ styling navigation menu
+ ............. */
+
+ nav{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    z-index: 2;
+    position: absolute;
+    right:0rem;
+    left: 0rem;
+ }
+ ul{
+    list-style-type: none;
+    display: inline-flex;
+    gap: 1rem;
+    /* float: right; */
+ }
+        nav ul li a {
+            font-family: var(--ff-Barlow);
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--White);
+            padding: 0.75rem;
+            font-size: 14px;
+        }
+        ul li a:hover{
+            background-color: var(--White);
+            color: var(--Very-dark-desaturated-blue);
+            border-radius: 25px;
+            font-family: var(--ff-fraunces);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        /* setting responsiveness for 
+        mobile menu 
+        ....................*/
+.mobile-menu{
+    display: none;
+}
+    .mobile-menu:hover{
+        cursor: pointer;
+    }
+
+.head {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    text-align: center;
+    color:var(--White);
+}
+    .heading {
+        font-family: var(--ff-fraunces);
+        font-weight: 900;
+        letter-spacing: 0.5rem;
+        font-size: 5vw;
+        text-transform: uppercase;
+    }
+/* Removing extra spaces under images */
+img{
+    display:block;
+}
+
+/* display section in two colomn */
+.two-colomn {
+    display: flex;
+    
+}   
+    .two-colomn div{
+        width: 50%;
+    }
+
+/* Styling text containers */
+.text-container {
+    padding-inline: 10vw;
+    padding-block: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:hsla(7, 99%, 70%,0.05) ;
+}
+    .text-container h2 {
+        font-family: var(--ff-fraunces);
+        font-size: 3vw;
+        font-weight: 900;
+    }
+    .text-container p {
+        font-family: var(--ff-Barlow);
+        color: var(--Dark-grayish-blue);
+    }
+    .text-container a {
+        width: fit-content;
+        text-decoration: none;
+        border-bottom: 10px solid hsla(51, 100%, 49%,0.5);
+        border-radius: 12px;
+        color: var(--Very-dark-desaturated-blue);
+        font-family: var(--ff-fraunces);
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+.stand-out .text-container a {
+    border-color: hsla(7, 99%, 70%,0.5);
+}
+
+
+/* styling text over image on graphic
+design and photgaphy section */
+.graphic-photgraphy{
+    width: 100%;
+    position: relative;
+}
+.text-overlay {
+    position:absolute;
+    width: 25rem;
+    top: 65%;
+    padding-inline: 12vw;
+}
+    .text-overlay h3 {
+        color: var(--Dark-desaturated-cyan-graphic-design-text);
+        font-family: var(--ff-fraunces);
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 2rem;
+    }
+    .text-overlay p {
+        color:var(--Dark-desaturated-cyan-graphic-design-text);
+        font-family: var(--ff-Barlow);
+        /* margin-bottom: 4vw; */
+        text-align: center;
+        line-height: 1.5rem;
+        font-size: 15px;
+    }
+
+/* styling client testimonials */
+
+
+.testimonials{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:hsla(7, 99%, 70%,0.05) ;
+}
+    .client-heading {
+        color: var(--Grayish-blue);
+        letter-spacing: 5px;
+        font-family: var(--ff-fraunces);
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-bottom: 5rem;
+    }
+    .testimonial-container{
+        display: flex;
+        /* padding: 2rem; */
+
+    }
+    .testimonial-container >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        width: 20rem;
+        margin-inline: 0.5rem;
+    }
+    .testimonial-container div img{
+        border-radius: 50%;
+        width: 60px;
+
+    }
+    .testimonial-container p{
+        color: var(--Very-dark-desaturated-blue);
+        text-align: center;
+    }
+    .testimonial-container .client-name {
+        font-family: var(--ff-fraunces);
+    }
+    .testimonial-container .client-designation {
+        color: var(--Dark-grayish-blue);
+        font-size: 14px;
+        margin-top: 0.75rem;
+    }
+
+/* gallery images styling */
+
+.four-images{
+    display: flex;
+}
+
+  /* footer styling */
+footer >div{
+    padding: 4rem;
+    padding-bottom: 2rem;
+    background-color: hsl(167, 37%, 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* logo style footer */
+  .logo-footer{
+    color: var(--Dark-desaturated-cyan-graphic-design-text);
+    margin-bottom:2rem;
+    font-size: 3rem;
+}
+/* navigation footer style */
+
+.nav-footer a{
+    text-decoration: none;
+    color: hsl(168, 34%, 41%);
+    margin-inline: 1rem;
+    font-family: var(--ff-Barlow);
+    text-align: center;
+  }
+  .nav-footer a:hover {
+    color: var(--White);
+  }
+
+.social-links {
+    display: inline-flex;
+    gap: 1.2rem;
+    margin-top: 5rem;
+    margin-bottom: 0rem;
+}
+    .social-links i{
+        color: var(--Dark-desaturated-cyan-graphic-design-text);
+        font-size: 1.2rem;
+    }
+        .social-links i:hover{
+            cursor: pointer;
+            color: white;
+        }
+@media screen and (max-width:500px) {
+    /* Mobile menu styling  */
+    .mobile-menu{
+        display: block;
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: var(--White);     
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        top: 4rem;
+        width: 80%;
+        height: 250%;
+        clip-path: polygon(93% 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+        padding-top: 3rem;
+    }
+        .menu li a {
+            color: var(--Dark-grayish-blue);
+        }
+            .menu li a:hover {
+                background-color: var(--Yellow);
+            }
+    .active.menu {
+        display: flex;
+
+    }
+    /* mobile menu styling ends */
+
+    /* setting single colomn layout */
+    .heading {
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+    .two-colomn div{
+        width: 100%;
+    }
+    .text-container{
+        padding-block: 4.5em;
+        gap:2.5em;
+
+    }
+        .text-container h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            
+        }
+        .text-container p{
+            
+            text-align: center;
+            line-height: 1.7rem;
+        }
+        .text-container a {
+            text-align: center;
+            margin-left: 25vw;
+        }
+    .transform {
+        flex-direction: column-reverse;
+    }
+    .stand-out {
+        flex-direction: column;
+    }
+    .graphic-photgraphy {
+        flex-direction: column;
+    }
+        .graphic-design, .photography {
+            position: relative;
+        }
+    .testimonials {
+        height: fit-content;
+        padding-top: 4rem;
+    }
+    .testimonial-container {
+            margin-bottom: 4rem;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        .testimonial-container >div{
+            gap: 2rem;
+            margin-inline: 1rem;
+        }
+    .four-images {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+}
+
