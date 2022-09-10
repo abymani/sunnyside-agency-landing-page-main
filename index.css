@@ -137,6 +137,7 @@ img{
     .text-container p {
         font-family: var(--ff-Barlow);
         color: var(--Dark-grayish-blue);
+        line-height: 1.5rem;
     }
     .text-container a {
         width: fit-content;
