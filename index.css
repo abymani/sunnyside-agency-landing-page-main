@@ -142,16 +142,32 @@ img{
     .text-container a {
         width: fit-content;
         text-decoration: none;
-        border-bottom: 10px solid hsla(51, 100%, 49%,0.5);
-        border-radius: 12px;
         color: var(--Very-dark-desaturated-blue);
         font-family: var(--ff-fraunces);
         font-size: 1.2rem;
         text-transform: uppercase;
+        position: relative;
     }
+        .text-container a::after {
+            content: "";
+            position: absolute;
+            left:0;
+            top:1rem;
+            height: 0.5rem;
+            z-index: -1;
+            width: 100%;
+            background-color:hsla(51, 100%, 49%,0.5);
+            border-radius: 50px;
+            transition: transform 0.25s ease;
+        }
 
-.stand-out .text-container a {
-    border-color: hsla(7, 99%, 70%,0.5);
+        .text-container a:hover::after {
+            transform: scale(1.2,4);
+            top: 0.5rem;
+        }
+
+.stand-out .text-container a::after {
+    background-color: hsla(7, 99%, 70%,0.5);
 }
 
 
